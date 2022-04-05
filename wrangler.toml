@@ -1,10 +1,16 @@
 name = "my-typescript-worker"
 type = "javascript"
-# zone_id = ""
+zone_id = ""
 account_id = "6733500ac6d08278f562a7c21b82ad9b"
-# route = ""
+route = ""
 workers_dev = true
 compatibility_date = "2022-04-03"
+kv_namespaces = [
+  { binding = "REDIS", id = "711ce1f3a350475f8623f8cb0ebba915" },
+]
+
+[triggers]
+crons = ["* * * * *"]
 
 [build]
 command = "npm install && npm run build"
